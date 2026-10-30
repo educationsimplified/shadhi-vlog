@@ -1,0 +1,531 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10100f">
+<meta name="description" content="Sohrat Mama and Hasrat Mama wedding diaries. Filmed by Firoz Alam and Uzair Ahmed.">
+<title>Shaadi Diaries | Wedding Films</title>
+
+<style>
+:root {
+  --gold: #d4ad7c;
+  --bg: #10100f;
+  --text: #f4eee5;
+  --muted: #aaa198;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 95vh;
+  display: flex;
+  align-items: flex-end;
+  padding: 7%;
+  position: relative;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.75), transparent),
+    linear-gradient(0deg, #10100f, transparent 75%),
+    url("https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=2200&q=85")
+    center/cover;
+}
+
+nav {
+  position: absolute;
+  top: 30px;
+  left: 7%;
+  right: 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: var(--gold);
+  letter-spacing: 4px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  font-size: 11px;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 7px;
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.eyebrow {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(65px, 12vw, 150px);
+  font-weight: 400;
+  line-height: .9;
+  margin: 25px 0;
+  letter-spacing: -5px;
+}
+
+h1 em {
+  color: var(--gold);
+}
+
+.hero-content p {
+  color: #ddd;
+  max-width: 480px;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.hero-meta {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  color: #d4ad7c;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* INTRO */
+
+.intro {
+  text-align: center;
+  padding: 110px 20px 90px;
+  max-width: 850px;
+  margin: auto;
+}
+
+h2 {
+  font-family: Georgia, serif;
+  font-size: clamp(38px, 6vw, 70px);
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.intro p {
+  color: var(--muted);
+  line-height: 2;
+  margin-top: 25px;
+}
+
+/* VIDEOS */
+
+.films {
+  padding: 50px 7% 120px;
+}
+
+.section-head {
+  margin-bottom: 40px;
+}
+
+.film-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.film-card {
+  background: #191816;
+  padding: 12px;
+  border: 1px solid #393027;
+  transition: .3s;
+}
+
+.film-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+}
+
+.video-wrap {
+  aspect-ratio: 16/9;
+  background: black;
+}
+
+.video-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.film-info {
+  padding: 25px 15px;
+}
+
+.film-kicker {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.film-title {
+  font-family: Georgia, serif;
+  font-size: clamp(25px, 3vw, 38px);
+  margin-top: 12px;
+}
+
+.film-sub {
+  color: #999;
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.watch {
+  display: inline-block;
+  margin-top: 22px;
+  padding: 12px 20px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 2px;
+  transition: .3s;
+}
+
+.watch:hover {
+  background: var(--gold);
+  color: #111;
+}
+
+/* QUOTE */
+
+.interlude {
+  padding: 120px 20px;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
+    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1800&q=85")
+    center/cover;
+}
+
+.interlude blockquote {
+  max-width: 800px;
+  margin: auto;
+  font-family: Georgia, serif;
+  font-size: clamp(32px, 5vw, 60px);
+  line-height: 1.2;
+}
+
+.interlude p {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: 4px;
+  margin-top: 30px;
+}
+
+/* CREDITS */
+
+.credits {
+  text-align: center;
+  padding: 110px 20px;
+}
+
+.credits p {
+  color: var(--muted);
+  margin-top: 20px;
+}
+
+.credit-names {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.credit-person strong {
+  font-family: Georgia, serif;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+.credit-person span {
+  display: block;
+  color: var(--gold);
+  margin-top: 12px;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+/* FOOTER */
+
+footer {
+  border-top: 1px solid #393027;
+  padding: 30px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #999;
+  font-size: 11px;
+}
+
+footer b {
+  color: var(--gold);
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+  .hero {
+    min-height: 88vh;
+    padding: 35px 25px 65px;
+    background-position: 55% center;
+  }
+
+  nav {
+    left: 25px;
+    right: 25px;
+    top: 25px;
+  }
+
+  .logo {
+    font-size: 9px;
+    letter-spacing: 2px;
+  }
+
+  .nav-link {
+    font-size: 8px;
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  .hero-meta {
+    gap: 14px;
+    font-size: 8px;
+  }
+
+  .intro {
+    padding: 80px 25px;
+  }
+
+  .films {
+    padding: 30px 18px 80px;
+  }
+
+  .film-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .credit-names {
+    gap: 45px;
+  }
+
+  footer {
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+@media(prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+</style>
+</head>
+
+<body>
+
+<header class="hero" id="home">
+
+  <nav>
+    <a href="#home" class="logo">The Wedding Diaries</a>
+    <a href="#films" class="nav-link">WATCH THE FILMS ↗</a>
+  </nav>
+
+  <div class="hero-content">
+    <div class="eyebrow">
+      Two celebrations · A lifetime of memories
+    </div>
+
+    <h1>Shaadi<br><em>Diaries.</em></h1>
+
+    <p>
+      The laughter behind the lens. The little moments
+      between the rituals. Two family weddings, captured
+      as they happened — candid, heartfelt and unforgettable.
+    </p>
+
+    <div class="hero-meta">
+      <span>Sohrat Mama</span>
+      <span>Hasrat Mama</span>
+      <span>Behind the Scenes</span>
+    </div>
+  </div>
+</header>
+
+<section class="intro">
+  <div class="eyebrow">More than just a wedding film</div>
+
+  <h2>
+    Every frame holds<br>
+    a little <em style="color:#d4ad7c">piece of us.</em>
+  </h2>
+
+  <p>
+    From the madness of getting ready to the joy on the
+    dance floor, these are the moments that made the
+    celebrations ours. Press play and relive the memories.
+  </p>
+</section>
+
+<main class="films" id="films">
+
+  <div class="section-head">
+    <div class="eyebrow">THE WEDDING FILMS</div>
+    <h2>Our family stories.</h2>
+  </div>
+
+  <div class="film-grid">
+
+    <!-- SOHRAT MAMA -->
+
+    <article class="film-card">
+
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/_DxOSI4CcmI?rel=0"
+          title="Sohrat Mama Wedding"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="film-info">
+        <div class="film-kicker">
+          Chapter 01 · The Celebration
+        </div>
+
+        <div class="film-title">
+          Sohrat Mama's Wedding
+        </div>
+
+        <div class="film-sub">
+          Behind the scenes · Wedding vlog
+        </div>
+
+        <a class="watch"
+           href="https://youtu.be/_DxOSI4CcmI"
+           target="_blank"
+           rel="noopener">
+          WATCH ON YOUTUBE ↗
+        </a>
+      </div>
+
+    </article>
+
+    <!-- HASRAT MAMA -->
+
+    <article class="film-card">
+
+      <div class="video-wrap">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/IOv6GAieHpU?rel=0"
+          title="Hasrat Mama Wedding"
+          loading="lazy"
+          allowfullscreen>
+        </iframe>
+      </div>
+
+      <div class="film-info">
+        <div class="film-kicker">
+          Chapter 02 · The Memories
+        </div>
+
+        <div class="film-title">
+          Hasrat Mama's Wedding
+        </div>
+
+        <div class="film-sub">
+          Behind the scenes · Wedding vlog
+        </div>
+
+        <a class="watch"
+           href="https://youtu.be/IOv6GAieHpU"
+           target="_blank"
+           rel="noopener">
+          WATCH ON YOUTUBE ↗
+        </a>
+      </div>
+
+    </article>
+
+  </div>
+</main>
+
+<section class="interlude">
+  <blockquote>
+    "The best moments are often the ones we never planned."
+  </blockquote>
+
+  <p>UNSCRIPTED · UNFILTERED · UNFORGETTABLE</p>
+</section>
+
+<section class="credits" id="credits">
+
+  <div class="eyebrow">BEHIND THE CAMERA</div>
+
+  <h2>Captured with love.</h2>
+
+  <p>
+    A family celebration, seen through the eyes of two storytellers.
+  </p>
+
+  <div class="credit-names">
+
+    <div class="credit-person">
+      <span>Shot By</span>
+      <strong>Firoz Alam</strong>
+      
+    </div>
+
+    <div class="credit-person">
+      <span>Shot By</span>
+      <strong>Uzair Ahmed</strong>
+      
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span>© <b>Shaadi Diaries</b> · A family archive</span>
+  <span>Made of memories, kept forever.</span>
+</footer>
+
+</body>
+</html>
